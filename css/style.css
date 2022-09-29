@@ -31,6 +31,7 @@ body {
   top: 70%;
   right: 15px;
   width: 44px;
+  z-index: 4;
   height: 44px;
   border-radius: 5px;
   border: 1px solid #ffbf19;
@@ -758,10 +759,6 @@ body {
 
 .footer__nav {
   width: 100%;
-  overflow: scroll;
-}
-.footer__nav::-webkit-scrollbar {
-  display: none;
 }
 .footer__nav ul {
   display: flex;
@@ -789,7 +786,7 @@ body {
 }
 
 .container_footer {
-  max-width: 1900px;
+  max-width: 1900px !important;
   display: flex;
   grid-gap: 40px;
   justify-content: space-between;
@@ -842,6 +839,12 @@ body {
   .games__aside {
     flex-basis: 35%;
   }
+  .container_footer {
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 0px;
+    padding-bottom: 20px;
+  }
 }
 @media (max-width: 992px) {
   .container {
@@ -852,12 +855,6 @@ body {
     top: -50px;
     left: 50%;
     right: unset;
-  }
-  .container_footer {
-    flex-direction: column;
-    align-items: center;
-    grid-gap: 0px;
-    padding-bottom: 20px;
   }
   .footer__nav ul {
     flex-direction: column;
